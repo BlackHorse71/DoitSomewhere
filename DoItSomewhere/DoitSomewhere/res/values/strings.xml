@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, DoitSomewhereActivity!</string>
     <string name="app_name">DoitSomewhere</string>
+    <string name="location">Location:</string>
 
 </resources>
