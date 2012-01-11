@@ -24,13 +24,19 @@
 
             <requestFocus />
         </EditText>
-
+
         <EditText
-            android:id="@+id/lol"
+            android:id="@+id/lon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
     </TableRow>
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Locate me" />
 
 </TableLayout>

@@ -18,7 +18,8 @@ public final class R {
         public static final int TableRow=0x7f050001;
         public static final int TextView=0x7f050002;
         public static final int lat=0x7f050003;
-        public static final int lol=0x7f050004;
+        public static final int lon=0x7f050004;
+        public static final int map=0x7f050005;
     }
     public static final class layout {
         public static final int locate=0x7f030000;
