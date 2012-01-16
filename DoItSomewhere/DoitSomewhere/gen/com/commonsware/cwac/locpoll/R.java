@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package uj.edu.DoIt;
+package com.commonsware.cwac.locpoll;
 
 public final class R {
     public static final class attr {

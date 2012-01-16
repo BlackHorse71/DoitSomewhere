@@ -4,5 +4,8 @@
     <string name="hello">Hello World, DoitSomewhereActivity!</string>
     <string name="app_name">DoitSomewhere</string>
     <string name="location">Location:</string>
+    <string name="url"/>
+    <string name="Latitude"/>
+    <string name="Longitute"/>
 
 </resources>
