@@ -45,7 +45,7 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		setContentView(R.layout.locate);
+		setContentView(R.layout.main);
 		latituteField = (TextView) findViewById(R.id.TextView02);
 		longitudeField = (TextView) findViewById(R.id.TextView04);
 		
@@ -69,7 +69,7 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
 					longitudeField.setText("Provider not available");
 				}
 		
-      Button btn=(Button)findViewById(R.id.map);
+    /*  Button btn=(Button)findViewById(R.id.map);
 		lat=(EditText)findViewById(R.id.lat);
 		lon=(EditText)findViewById(R.id.lon);
     
@@ -87,7 +87,7 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
 	
 		});
 
-    
+    */
     }
     
     
