@@ -11,32 +11,32 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static int ic_launcher=0x7f020000;
+        public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static int TableLayout=0x7f050000;
-        public static int TableRow=0x7f050001;
-        public static int TextView=0x7f050002;
-        public static int TextView01=0x7f050007;
-        public static int TextView02=0x7f050008;
-        public static int TextView03=0x7f05000a;
-        public static int TextView04=0x7f05000b;
-        public static int lat=0x7f050003;
-        public static int linearLayout1=0x7f050006;
-        public static int linearLayout2=0x7f050009;
-        public static int lon=0x7f050004;
-        public static int map=0x7f050005;
+        public static final int TableLayout=0x7f050000;
+        public static final int TableRow=0x7f050001;
+        public static final int TextView=0x7f050002;
+        public static final int TextView01=0x7f050007;
+        public static final int TextView02=0x7f050008;
+        public static final int TextView03=0x7f05000a;
+        public static final int TextView04=0x7f05000b;
+        public static final int lat=0x7f050003;
+        public static final int linearLayout1=0x7f050006;
+        public static final int linearLayout2=0x7f050009;
+        public static final int lon=0x7f050004;
+        public static final int map=0x7f050005;
     }
     public static final class layout {
-        public static int locate=0x7f030000;
-        public static int main=0x7f030001;
+        public static final int locate=0x7f030000;
+        public static final int main=0x7f030001;
     }
     public static final class string {
-        public static int Latitude=0x7f040004;
-        public static int Longitute=0x7f040005;
-        public static int app_name=0x7f040000;
-        public static int hello=0x7f040001;
-        public static int location=0x7f040002;
-        public static int url=0x7f040003;
+        public static final int Latitude=0x7f040004;
+        public static final int Longitute=0x7f040005;
+        public static final int app_name=0x7f040000;
+        public static final int hello=0x7f040001;
+        public static final int location=0x7f040002;
+        public static final int url=0x7f040003;
     }
 }
