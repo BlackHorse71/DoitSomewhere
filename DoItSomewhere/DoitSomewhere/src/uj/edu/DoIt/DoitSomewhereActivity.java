@@ -69,25 +69,26 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
 					longitudeField.setText("Provider not available");
 				}
 		
-    /*  Button btn=(Button)findViewById(R.id.map);
-		lat=(EditText)findViewById(R.id.lat);
-		lon=(EditText)findViewById(R.id.lon);
-    
+    Button btn=(Button)findViewById(R.id.Locate);
+     
+	//	lat=(EditText)findViewById(R.id.lat);
+	//	lon=(EditText)findViewById(R.id.lon);
+		
 		btn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
-				lat.setText(latituteField.getText());
+				/*lat.setText(latituteField.getText());
 				lon.setText(longitudeField.getText());
 				String _lat=lat.getText().toString();
 				String _lon=lon.getText().toString();
 				Uri uri=Uri.parse("geo:"+_lat+","+_lon);
 				
-				startActivity(new Intent(Intent.ACTION_VIEW, uri));
+				startActivity(new Intent(Intent.ACTION_VIEW, uri)); */
 			}
 			
 	
 		});
 
-    */
+    
     }
     
     
