@@ -60,8 +60,8 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
 				// Initialize the location fields
 				if (location != null) {
 					System.out.println("Provider " + provider + " has been selected.");
-					int latl = (int) (location.getLatitude());
-					int lngg = (int) (location.getLongitude());
+					long latl = (long) (location.getLatitude());
+					long lngg = (long) (location.getLongitude());
 					latituteField.setText(String.valueOf(latl));
 					longitudeField.setText(String.valueOf(lngg));
 				} else {
