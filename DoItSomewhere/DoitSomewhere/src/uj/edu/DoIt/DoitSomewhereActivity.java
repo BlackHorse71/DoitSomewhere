@@ -76,13 +76,13 @@ public class DoitSomewhereActivity extends Activity implements LocationListener 
 		
 		btn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
-				/*lat.setText(latituteField.getText());
-				lon.setText(longitudeField.getText());
-				String _lat=lat.getText().toString();
-				String _lon=lon.getText().toString();
+				//lat.setText(latituteField.getText());
+				//lon.setText(longitudeField.getText());
+				String _lat=latituteField.getText().toString();
+				String _lon=longitudeField.getText().toString();
 				Uri uri=Uri.parse("geo:"+_lat+","+_lon);
 				
-				startActivity(new Intent(Intent.ACTION_VIEW, uri)); */
+				startActivity(new Intent(Intent.ACTION_VIEW, uri));
 			}
 			
 	

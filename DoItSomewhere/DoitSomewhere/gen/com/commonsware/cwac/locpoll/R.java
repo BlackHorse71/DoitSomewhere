@@ -34,6 +34,7 @@ public final class R {
     }
     public static final class string {
         public static final int Latitude=0x7f040004;
+        public static final int LocateMe=0x7f040006;
         public static final int Longitute=0x7f040005;
         public static final int app_name=0x7f040000;
         public static final int hello=0x7f040001;

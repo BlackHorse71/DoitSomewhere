@@ -7,5 +7,6 @@
     <string name="url"/>
     <string name="Latitude"/>
     <string name="Longitute"/>
+    <string name="LocateMe">LocateMe</string>
 
 </resources>
