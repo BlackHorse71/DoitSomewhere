@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#3f4f57">
+
+    <include 
+        layout="@layout/actionbar"/>
+    
+    <RelativeLayout
+        android:id="@+id/relativeWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Do it somewhere!"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                 />
+
+            <LinearLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/grayrect"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:orientation="vertical">
+                <TextView
+                        android:id="@+id/textView2"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="You are looking for:"
+		                android:textColor="#444444"
+		                android:textSize="14dp"
+		                android:padding="10dp"
+		                 />
+                <LinearLayout
+                    android:id="@+id/lookingForBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/button"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="lorem ipsum"
+		                android:textColor="#444444"
+		                android:textSize="10dp"
+		                 />
+                    <TextView
+                        android:id="@+id/textView3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="lorem ipsum"
+		                android:textColor="#444444"
+		                android:textSize="10dp"
+		                 />
+                    <TextView
+                        android:id="@+id/textView3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="lorem ipsum"
+		                android:textColor="#444444"
+		                android:textSize="10dp"
+		                 />
+                </LinearLayout>
+                
+				<Button
+                   android:id="@+id/findLocationsBtn"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                   android:text="Find locations" />
+				
+				
+				<LinearLayout android:id="@+id/linearLayout1"
+					android:layout_height="wrap_content" android:layout_width="match_parent"
+					android:orientation="horizontal" android:layout_marginTop="40dip">
+					<TextView android:text="Latitude: " android:layout_height="wrap_content"
+						android:layout_width="wrap_content" android:id="@+id/TextView01" android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+					<TextView android:text="unknown" android:layout_height="wrap_content"
+						android:layout_width="wrap_content" android:id="@+id/TextView02" android:textSize="20dip"></TextView>
+				</LinearLayout>
+				<LinearLayout android:id="@+id/linearLayout2"
+					android:layout_height="wrap_content" android:layout_width="match_parent">
+					<TextView android:text="Longitute: " android:layout_height="wrap_content"
+						android:layout_width="wrap_content" android:id="@+id/latitudeField"
+						android:layout_marginLeft="10dip" android:layout_marginRight="5dip" android:textSize="20dip"></TextView>
+					<TextView android:text="unknown" android:layout_height="wrap_content"
+						android:layout_width="wrap_content" android:id="@+id/longitudeField" android:textSize="20dip"></TextView>
+				</LinearLayout>
+				
+				
+            </LinearLayout>
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

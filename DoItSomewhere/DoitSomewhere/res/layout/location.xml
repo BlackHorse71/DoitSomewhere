@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3f4f57" >
+    
+    <include 
+        layout="@layout/actionbar"/> 
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/grayrect"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        >
+        
+        <ScrollView 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <TextView 
+                    android:id="@+id/locationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location Name"
+                    android:textSize="20dp"/>
+                
+                <RelativeLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                    android:id="@+id/locationType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location Type"
+                    android:layout_alignParentLeft="true"
+			        android:layout_centerVertical="true"
+                    android:textSize="12dp"/>
+                
+                <RatingBar 
+			   	    android:id="@+id/locationRate"
+			   	    android:numStars="5"
+			   	    android:stepSize="1"
+			   	    android:rating="0"
+			   	    android:layout_height="wrap_content"
+			   	    android:layout_width="wrap_content"
+			   	    android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			   	    style="?android:attr/ratingBarStyleSmall"
+			   	    />
+                    
+                </RelativeLayout>
+                
+                <TextView 
+                    android:id="@+id/locationDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Some description goes here. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel."
+                    android:textSize="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    
+
+</LinearLayout>
