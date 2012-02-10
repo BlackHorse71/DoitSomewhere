@@ -25,16 +25,17 @@ public class StartActivity extends Activity implements LocationListener {
         
         setContentView(R.layout.start);
         
+        
         _initActionBar();
         _setActionBarTitle("Search for locations");
         _setActionBarBtnVisible(true);
         _setActionBarBtnLabel("logout");
 
-        latitudeField = (TextView) findViewById(R.id.latitudeField);
+        latitudeField = (TextView) findViewById(R.id.TextView02);
         longitudeField = (TextView) findViewById(R.id.longitudeField);
         
         
-        _setActionBarBtnOnClick(new View.OnClickListener() {
+       _setActionBarBtnOnClick(new View.OnClickListener() {
 			
         	/**
         	 * @TODO some logout backend stuff here
@@ -52,40 +53,52 @@ public class StartActivity extends Activity implements LocationListener {
 			}
 		});
         
+        
+    	// Get the location manager
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		// Define the criteria how to select the locatioin provider -> use
+		// default
+		Criteria criteria = new Criteria();
+		provider = locationManager.getBestProvider(criteria, false);
+		Location location = locationManager.getLastKnownLocation(provider);
+		
+	//   if (_checkLoginStatus()) {
+		// Initialize the location fields
+		if (location != null) {
+			System.out.println("Provider " + provider + " has been selected.");
+			long latl = (long) (location.getLatitude());
+			long lngg = (long) (location.getLongitude());
+			latitudeField.setText(String.valueOf(latl));
+			longitudeField.setText(String.valueOf(lngg));
+		} else {
+			latitudeField.setText("Provider not available");
+			longitudeField.setText("Provider not available"); 
+		}
+		  // }
+        
         Button findLocationsBtn = (Button) findViewById(R.id.findLocationsBtn);
         findLocationsBtn.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
+			//	String _lat=latitudeField.getText().toString();
+			//	String _lon=longitudeField.getText().toString();
+				//Uri uri=Uri.parse("geo:"+_lat+","+_lon);
+				
+			//	startActivity(new Intent(Intent.ACTION_VIEW, uri));
 				startActivity(new Intent("uj.edu.DoIt.LOCATION_LIST"));
 			}
 		});
         
-        if (_checkLoginStatus()) {
-        	// Get the location manager
-    		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-    		// Define the criteria how to select the locatioin provider -> use
-    		// default
-    		Criteria criteria = new Criteria();
-    		provider = locationManager.getBestProvider(criteria, false);
-    		Location location = locationManager.getLastKnownLocation(provider);
-    		
-    		// Initialize the location fields
-			if (location != null) {
-				System.out.println("Provider " + provider + " has been selected.");
-				long latl = (long) (location.getLatitude());
-				long lngg = (long) (location.getLongitude());
-				latitudeField.setText(String.valueOf(latl));
-				longitudeField.setText(String.valueOf(lngg));
-			} else {
-				latitudeField.setText("Provider not available");
-				longitudeField.setText("Provider not available");
-			}
-        }
-    }
+     
+        	
+        	
+        
+         }
+
     
 	public void onLocationChanged(Location location) {
-		int lat = (int) (location.getLatitude());
-		int lng = (int) (location.getLongitude());
+		long lat = (long) (location.getLatitude());
+		long lng = (long) (location.getLongitude());
 		latitudeField.setText(String.valueOf(lat));
 		longitudeField.setText(String.valueOf(lng));
 	}

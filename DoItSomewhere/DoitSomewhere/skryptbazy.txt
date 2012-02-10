@@ -1,0 +1,7 @@
+create database doitsomewhere;
+use doitsomewhere;
+create table klient (id bigint unsigned not null auto_increment,name varchar(128) not null, primary key(id));
+create table miejsce (id bigint unsigned not null auto_increment,name varchar(128) not null, opis text not null,linki text,lokalizacja blob, tworca bigint unsigned not null references klient(id), primary key(id));
+create table ocena (id bigint unsigned not null auto_increment, name varchar(128) not null, wartosc  smallint unsigned not null, ilosc bigint unsigned not null, miejsce bigint unsigned not null references miejsce(id) ,tworca bigint unsigned not null references klient(id),  primary key(id));
+create table tag (id bigint unsigned not null auto_increment, slwo_kluczowe text, miejsce bigint unsigned not null references miejsce(id), primary key(id));
+create table komentarz(id bigint unsigned not null auto_increment, zawartosc text not null, data_wystawienia timestamp not null,tworca bigint unsigned not null references kliend(id), lokacja bigint unsigned not null references miejsce(id), primary key(id))
