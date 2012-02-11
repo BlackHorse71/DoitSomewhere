@@ -8,10 +8,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.hardware.SensorManager;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase;
+import android.hardware.SensorManager;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
-	private static final String DATABASE_NAME="db";
-	public static final String TITLE="title";
-	public static final String VALUE="value";
+	private static final String DATABASE_NAME="loc";
+	public static final String NAME="Name";
+	public static final String VALUE="Location";
 	
 	public DatabaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, 1);
@@ -19,67 +27,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE constants (_id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, value REAL);");
+		db.execSQL("CREATE TABLE Locations (_id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Location TEXT);");
 		
 		ContentValues cv=new ContentValues();
 		
-		cv.put(TITLE, "Gravity, Death Star I");
-		cv.put(VALUE, SensorManager.GRAVITY_DEATH_STAR_I);
-		db.insert("constants", TITLE, cv);
+		cv.put(NAME, "Rynek");
+		cv.put(VALUE, "50,19");
+		db.insert("Locations", NAME, cv);
 		
-		cv.put(TITLE, "Gravity, Earth");
-		cv.put(VALUE, SensorManager.GRAVITY_EARTH);
-		db.insert("constants", TITLE, cv);
+		cv.put(NAME, "Sukiennice");
+		cv.put(VALUE, "50,19");
+		db.insert("Locations", NAME, cv);
 		
-		cv.put(TITLE, "Gravity, Jupiter");
-		cv.put(VALUE, SensorManager.GRAVITY_JUPITER);
-		db.insert("constants", TITLE, cv);
+		cv.put(NAME, "PKP");
+		cv.put(VALUE, "50,19");
+		db.insert("Locations", NAME, cv);
 		
-		cv.put(TITLE, "Gravity, Mars");
-		cv.put(VALUE, SensorManager.GRAVITY_MARS);
-		db.insert("constants", TITLE, cv);
+		cv.put(NAME, "Pomnik Adama");
+		cv.put(VALUE, "50,19");
+		db.insert("Locations", NAME, cv);
+
 		
-		cv.put(TITLE, "Gravity, Mercury");
-		cv.put(VALUE, SensorManager.GRAVITY_MERCURY);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Moon");
-		cv.put(VALUE, SensorManager.GRAVITY_MOON);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Neptune");
-		cv.put(VALUE, SensorManager.GRAVITY_NEPTUNE);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Pluto");
-		cv.put(VALUE, SensorManager.GRAVITY_PLUTO);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Saturn");
-		cv.put(VALUE, SensorManager.GRAVITY_SATURN);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Sun");
-		cv.put(VALUE, SensorManager.GRAVITY_SUN);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, The Island");
-		cv.put(VALUE, SensorManager.GRAVITY_THE_ISLAND);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Uranus");
-		cv.put(VALUE, SensorManager.GRAVITY_URANUS);
-		db.insert("constants", TITLE, cv);
-		
-		cv.put(TITLE, "Gravity, Venus");
-		cv.put(VALUE, SensorManager.GRAVITY_VENUS);
-		db.insert("constants", TITLE, cv);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		android.util.Log.w("Constants", "Upgrading database, which will destroy all old data");
-		db.execSQL("DROP TABLE IF EXISTS constants");
+		android.util.Log.w("Locations", "Upgrading database, which will destroy all old data");
+		db.execSQL("DROP TABLE IF EXISTS Locations");
 		onCreate(db);
 	}
 }

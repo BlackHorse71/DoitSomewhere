@@ -83,7 +83,6 @@ public class StartActivity extends Activity implements LocationListener {
 			//	String _lat=latitudeField.getText().toString();
 			//	String _lon=longitudeField.getText().toString();
 				//Uri uri=Uri.parse("geo:"+_lat+","+_lon);
-				
 			//	startActivity(new Intent(Intent.ACTION_VIEW, uri));
 				startActivity(new Intent("uj.edu.DoIt.LOCATION_LIST"));
 			}

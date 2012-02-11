@@ -75,6 +75,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+         <activity
+            android:name=".DatabaseHelper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="uj.edu.DoIt.DATABASE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
     </application>
 
 </manifest>

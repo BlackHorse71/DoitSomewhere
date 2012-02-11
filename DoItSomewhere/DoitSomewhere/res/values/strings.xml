@@ -7,6 +7,6 @@
     <string name="url"/>
     <string name="Latitude"/>
     <string name="Longitute"/>
-    <string name="LocateMe">LocateMe</string>
+    <string name="LocateMe">LocateMe</string><string name="cancel">Cancel</string><string name="add_name">Dodaj lokalizacje</string><string name="delete_name">Jestes pewny ?</string><string name="ok">OK</string>
 
 </resources>
